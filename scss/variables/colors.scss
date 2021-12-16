@@ -1,0 +1,22 @@
+$yellow:#FFE606;
+$dark-grey:#333333;
+$white: #F4F4F4;
+
+$brand-colors:(
+    'brand':    $yellow,
+    'drak-grey': $dark-grey,
+    'white': $white,
+);
+
+@each $name, $value in $brand-colors {
+
+    .color-#{$name}{
+        color: $value;
+    }
+
+    .background-color-#{$name}{
+        background-color: $value;
+    }
+    
+}
+  
