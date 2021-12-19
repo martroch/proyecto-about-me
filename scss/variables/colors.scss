@@ -1,5 +1,5 @@
-$yellow:#FFE606;
-$dark-grey:#333333;
+$yellow:#FFE767;
+$dark-grey:#1A1D19;
 $white: #F4F4F4;
 
 $brand-colors:(
@@ -17,6 +17,5 @@ $brand-colors:(
     .background-color-#{$name}{
         background-color: $value;
     }
-    
 }
-  
+
