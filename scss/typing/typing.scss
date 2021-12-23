@@ -1,0 +1,60 @@
+$slider-name: typing-slider;
+$slides: 5;
+$typing-duration: 4s;
+$tab-letters: 25 14 16 13 15; //number of characters in each paragraph
+$slider-font-size:23px;
+
+@keyframes cursor {
+  from, to { border-color: transparent; }
+  50% { border-color: $white; }
+}
+
+@keyframes typing {
+  from { width: 100%; }
+  90%, to { width: 0; }
+}
+
+@keyframes slide {
+  #{100% / $slides} { font-size: $slider-font-size; }
+  to { font-size: 0; letter-spacing: 0; }
+}
+
+.#{$slider-name} {
+  font-family: "outfit";
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  color: $white;
+}
+
+.#{$slider-name} p {
+  position: relative;
+  display: inline;
+  font-size: 0;
+  letter-spacing: 0;
+  animation: slide $typing-duration * $slides step-start infinite;
+}
+
+.#{$slider-name} p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-left: 3px solid $white
+  ;
+  background-color: $red;
+  animation: typing $typing-duration infinite,
+             cursor 1s infinite;
+}
+
+@each $letters in $tab-letters {
+  $i: index($tab-letters, $letters);
+  .#{$slider-name} p:nth-child(#{$i}) {
+    animation-delay:  $typing-duration * ($i - 1);
+    &::after {
+      animation-delay: $typing-duration * ($i - 1);
+      animation-timing-function: steps(#{$letters}), step-end;
+    }
+  }
+}

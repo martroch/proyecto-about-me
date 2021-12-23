@@ -15,11 +15,24 @@
     margin: $margin-text;
     letter-spacing: 0.05em; 
 }
-.h2{
-    font-family: 'Cormorant';
-    font-size: 24px;
-    font-weight: 700;
-    color: $dark-grey;
-    margin: 0px;
 
+.title-small{
+    font-family: 'Cormorant';
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    margin: $margin-text;
+    text-align: center;
+    color: $dark-grey;
 }
+.cita{
+    font-family: 'Cormorant';
+    font-style: italic;
+    font-size: 24px;
+    font-weight: 400;
+    color: $white;
+    margin: 0px;
+    text-align: center;
+    color: $dark-grey;
+}
+

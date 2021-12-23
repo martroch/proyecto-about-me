@@ -11,11 +11,12 @@ body{
     color:$white;
     background-color: $dark-grey;
     margin: 0px;
-    padding: 0 $padding;
+    
 }
 
+
 .line{
-    background-color: $yellow;
+    background-color: $red;
     padding: $small;
     margin-left: -24px;
     width: 50%;
@@ -53,32 +54,8 @@ body{
 
 }
 .typing{
-    background-color: $yellow;
+    background-color: $red;
     margin-right: -30px;
     padding: 10px 50px 10px 40px;
     
 }
-.typewriter{
-    
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid $dark-grey; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0; /* Gives that scrolling effect as the typing happens */
-    padding: 0px;
-    animation: 
-      typing 2s steps(30, end),
-      blink-caret .6s step-end infinite;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* blinking */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: $dark-grey }
-  }
-  

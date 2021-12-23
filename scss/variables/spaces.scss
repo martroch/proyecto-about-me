@@ -6,3 +6,7 @@ $xl: $unit * 6;
 $large: $unit * 5;
 $margin-text:$space 0;
 $small: $unit/2;
+
+.padding{
+    padding: 0 $padding;
+}

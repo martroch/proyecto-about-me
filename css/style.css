@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,700;1,400;1,600&family=Outfit:wght@300;400;700&display=swap");
 .color-brand {
-  color: #FFE767;
+  color: #B20405;
 }
 
 .background-color-brand {
-  background-color: #FFE767;
+  background-color: #B20405;
 }
 
 .color-drak-grey {
@@ -21,6 +21,10 @@
 
 .background-color-white {
   background-color: #F4F4F4;
+}
+
+.padding {
+  padding: 0 24px;
 }
 
 .name {
@@ -40,12 +44,25 @@
   letter-spacing: 0.05em;
 }
 
-.h2 {
+.title-small {
   font-family: "Cormorant";
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  margin: 12px 0;
+  text-align: center;
   color: #1A1D19;
+}
+
+.cita {
+  font-family: "Cormorant";
+  font-style: italic;
+  font-size: 24px;
+  font-weight: 400;
+  color: #F4F4F4;
   margin: 0px;
+  text-align: center;
+  color: #1A1D19;
 }
 
 * {
@@ -66,11 +83,10 @@ body {
   color: #F4F4F4;
   background-color: #1A1D19;
   margin: 0px;
-  padding: 0 24px;
 }
 
 .line {
-  background-color: #FFE767;
+  background-color: #B20405;
   padding: 3px;
   margin-left: -24px;
   width: 50%;
@@ -107,56 +123,199 @@ body {
 }
 
 .typing {
-  background-color: #FFE767;
+  background-color: #B20405;
   margin-right: -30px;
   padding: 10px 50px 10px 40px;
 }
 
-.typewriter {
-  overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid #1A1D19;
-  /* The typwriter cursor */
-  white-space: nowrap;
-  /* Keeps the content on a single line */
-  margin: 0;
-  /* Gives that scrolling effect as the typing happens */
-  padding: 0px;
-  -webkit-animation: typing 2s steps(30, end), blink-caret 0.6s step-end infinite;
-          animation: typing 2s steps(30, end), blink-caret 0.6s step-end infinite;
+@-webkit-keyframes cursor {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #F4F4F4;
+  }
 }
 
-/* The typing effect */
+@keyframes cursor {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #F4F4F4;
+  }
+}
 @-webkit-keyframes typing {
   from {
-    width: 0;
-  }
-  to {
     width: 100%;
+  }
+  90%, to {
+    width: 0;
   }
 }
 @keyframes typing {
   from {
-    width: 0;
-  }
-  to {
     width: 100%;
   }
-}
-/* blinking */
-@-webkit-keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #1A1D19;
+  90%, to {
+    width: 0;
   }
 }
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
+@-webkit-keyframes slide {
+  20% {
+    font-size: 23px;
+  }
+  to {
+    font-size: 0;
+    letter-spacing: 0;
+  }
+}
+@keyframes slide {
+  20% {
+    font-size: 23px;
+  }
+  to {
+    font-size: 0;
+    letter-spacing: 0;
+  }
+}
+.typing-slider {
+  font-family: "outfit";
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  color: #F4F4F4;
+}
+
+.typing-slider p {
+  position: relative;
+  display: inline;
+  font-size: 0;
+  letter-spacing: 0;
+  -webkit-animation: slide 20s step-start infinite;
+          animation: slide 20s step-start infinite;
+}
+
+.typing-slider p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-left: 3px solid #F4F4F4;
+  background-color: #B20405;
+  -webkit-animation: typing 4s infinite, cursor 1s infinite;
+          animation: typing 4s infinite, cursor 1s infinite;
+}
+
+.typing-slider p:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.typing-slider p:nth-child(1)::after {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-timing-function: steps(25), step-end;
+          animation-timing-function: steps(25), step-end;
+}
+
+.typing-slider p:nth-child(2) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+.typing-slider p:nth-child(2)::after {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation-timing-function: steps(14), step-end;
+          animation-timing-function: steps(14), step-end;
+}
+
+.typing-slider p:nth-child(3) {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+.typing-slider p:nth-child(3)::after {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  -webkit-animation-timing-function: steps(16), step-end;
+          animation-timing-function: steps(16), step-end;
+}
+
+.typing-slider p:nth-child(4) {
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
+}
+.typing-slider p:nth-child(4)::after {
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
+  -webkit-animation-timing-function: steps(13), step-end;
+          animation-timing-function: steps(13), step-end;
+}
+
+.typing-slider p:nth-child(5) {
+  -webkit-animation-delay: 16s;
+          animation-delay: 16s;
+}
+.typing-slider p:nth-child(5)::after {
+  -webkit-animation-delay: 16s;
+          animation-delay: 16s;
+  -webkit-animation-timing-function: steps(15), step-end;
+          animation-timing-function: steps(15), step-end;
+}
+
+.gradient {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: linear-gradient(45deg, #1A1D19, #B02C32, #EB4C37, #F9CCD1, #ffffff);
+  background-size: 300% 300%;
+  -webkit-animation: gradient 10s ease infinite;
+          animation: gradient 10s ease infinite;
+  height: 100vh;
+}
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
   }
   50% {
-    border-color: #1A1D19;
+    background-position: 100% 50%;
   }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.text-gradient {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
