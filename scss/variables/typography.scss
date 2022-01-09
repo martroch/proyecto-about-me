@@ -6,20 +6,36 @@
     line-height: 70px;
     font-weight: 400;
     margin: $margin-text;
+    
+    
+    @media (min-width: 1024px){
+        font-size: 150px;
+        line-height: 120px;
+    }
 }
 .text{
     font-family: 'outfit';
     font-size: 20px;
     line-height: 25px;
-    font-weight: 400;
+    font-weight: 200;
     margin: $margin-text;
     letter-spacing: 0.05em; 
 }
+.text-small{
+    font-family: 'outfit';
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 200;
+    margin: 0px;
+   
+ 
+}
 
-.title-small{
+
+.intro-title{
     font-family: 'Cormorant';
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 40px;
+    line-height: 40px;
     font-weight: 400;
     margin: $margin-text;
     text-align: center;
@@ -30,9 +46,96 @@
     font-style: italic;
     font-size: 24px;
     font-weight: 400;
-    color: $white;
     margin: 0px;
     text-align: center;
-    color: $dark-grey;
 }
 
+.numbers{
+    font-family: 'Cormorant';
+    font-style: italic;
+    font-size: 100px;
+    margin: 0;
+
+}
+.card-numbers{
+    font-family: 'Cormorant';
+    font-style: italic;
+    font-size: 80px;
+    margin: -10px 0px;
+
+}
+
+.small-title{
+    font-family: 'Outfit';
+    font-size: 20px;
+    font-weight: 200;
+    margin: 0px;
+}
+
+.relevant-text{
+    font-family: 'Cormorant';
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 40px;
+    width: 100%;
+    
+}
+
+.relevant-text-underlined{
+    font-family: 'Cormorant';
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 40px;
+    background-color: $red;
+    background-position: left;
+    background-size: 100% 2px;
+   
+  
+
+}
+.link{
+    color: $grey;
+
+
+    &:hover{
+        color: $white;
+
+    }
+}
+
+.cita-small{
+    font-family:'Cormorant';
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 200;
+   
+
+}
+
+.contact-text{
+    font-family: 'Cormorant';
+    color:$red;
+    font-size: 40px;
+    font-weight: 200;
+   letter-spacing: 2px;
+   margin: 0px;
+
+}
+.contact-link{
+    color: $dark-grey;
+
+
+    &:hover{
+        color: $red;
+    }
+}
+
+.footer-text{
+    color: $dark-grey;
+    font-size: 14px;
+    font-family: 'Cormorant';
+    margin: 0px;
+    text-align: center;
+}

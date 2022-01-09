@@ -1,0 +1,28 @@
+.contact-card{
+    background-color: $white;
+    padding: $xl*1.5;
+}
+.top-contact{
+    margin-bottom: -16px;
+    color: $white;
+    font-family: 'conmornt';
+    font-size: 60px;
+    font-weight: 100;
+}
+
+.bottom-contact{
+    margin-top: -28px;
+    color: $white;
+    font-family: 'conmornt';
+    font-size: 60px;
+    font-weight: 100;
+    display: flex;
+    justify-content: right;
+}
+
+.conctact-links{
+    display: flex;
+    align-items: center;
+   margin-top: $space-large;
+  
+}

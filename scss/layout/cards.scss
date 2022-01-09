@@ -1,0 +1,62 @@
+.card-link{
+  
+    display: inline-block;
+    color: white;
+    max-width: 270px;
+    width: 100%;
+    margin: 20px 0px 10px $space--medium;
+    text-decoration: none;
+    transition: 0.5s;
+    
+
+
+    &:hover{
+        background-color: $red;
+        transform: scale(1.1);
+    
+    }
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding:$space-large 0px;
+        width: 40%;
+        margin: 0px;
+        
+        
+    }   
+
+   
+}
+    
+
+
+.inteior-card{
+    margin: $space-large  $space $space--medium $space--medium ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;}
+
+
+.card{
+    display: inline-block;
+    max-width: 520px;
+    text-align: left;
+    
+}
+.section-card{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding:$space-large 0px;
+        width: 100%;
+        
+        
+    }   
+}

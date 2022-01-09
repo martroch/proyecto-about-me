@@ -4,10 +4,26 @@
 
 @import "variables/typography.scss";
 
+@import "variables/button.scss";
+
 @import "utilities/utilities.scss";
 
 @import "site/_site.scss";
 
+@import "layout/_header.scss";
+
+@import "layout/gradient.scss";
+
 @import "typing/typing.scss";
 
-@import "gradient/gradient.scss";
+@import "layout/home.scss";
+
+@import "layout/work-sapce.scss";
+
+@import "layout/cards.scss";
+
+@import "layout/about-me.scss";
+
+@import "layout/contact.scss";
+
+@import "layout/footer-page.scss";
