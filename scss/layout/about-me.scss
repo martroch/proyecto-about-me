@@ -5,13 +5,19 @@
     background-color: $white;
     margin: 0px;
     padding: 0px;
-    height: 900px;
+    height: 800px;
+
+    
    
 
 
 }
-.scroll{overflow: scroll;
+.scroll{
+    overflow-y: scroll;
+    overflow-x: hidden;
     width: 50%;
+   
+
 }
 
 .about{
@@ -20,14 +26,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media (min-width: 768px) {
+      width: 50%;
+      padding: 0px $xl*2 0px $xl*3;
+  }
 }
   
 .container-scroll{
-   
-    margin-right: -10px;
-    height: 1300px;
+   display: flex;
+   justify-content: center;
     
-
   }
   
 
@@ -36,7 +45,10 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 1500px;
+    height: 1500px; 
+    
+    @media (min-width: 768px) {
+    width: 50%;}
   }
   
   .item {

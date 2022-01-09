@@ -5,3 +5,18 @@ $space-large: $unit * 5;
 $xl: $unit * 6;
 $margin-text:$space 0;
 $small: $unit/2;
+
+$brand-unit:(
+    
+    'space-large': $space-large,
+    
+);
+
+@each $name, $value in $brand-unit {
+
+    .unite-#{$name}{
+        padding: $value;
+    }
+
+  
+}

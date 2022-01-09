@@ -23,6 +23,10 @@
   background-color: #F4F4F4;
 }
 
+.unite-space-large {
+  padding: 30px;
+}
+
 .name {
   font-family: "Cormorant";
   font-size: 70px;
@@ -39,8 +43,8 @@
 
 .text {
   font-family: "outfit";
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 18px;
+  line-height: 24px;
   font-weight: 200;
   margin: 12px 0;
   letter-spacing: 0.05em;
@@ -48,8 +52,8 @@
 
 .text-small {
   font-family: "outfit";
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 14px;
+  line-height: 18px;
   font-weight: 200;
   margin: 0px;
 }
@@ -77,14 +81,21 @@
   font-family: "Cormorant";
   font-style: italic;
   font-size: 100px;
-  margin: 0;
+  margin: -10px 0px;
+}
+@media (min-width: 768px) {
+  .numbers {
+    font-size: 150px;
+    margin-top: -100px;
+    /*margin-bottom: -20px; me gustaria dejar esto a escepcion del 03*/
+  }
 }
 
 .card-numbers {
   font-family: "Cormorant";
   font-style: italic;
-  font-size: 80px;
-  margin: -10px 0px;
+  font-size: 50px;
+  margin: -15px 0px -5px 0px;
 }
 
 .small-title {
@@ -174,7 +185,22 @@ body {
 
 .secction-white {
   background-color: #F4F4F4;
-  padding: 30px;
+}
+@media (min-width: 768px) {
+  .secction-white {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 18px 0px;
+    min-height: 100vh;
+  }
 }
 
 .secction-dark {
@@ -193,8 +219,8 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 30px 0px;
-    height: 100vh;
+    padding: 18px 0px;
+    min-height: 100vh;
   }
 }
 
@@ -211,7 +237,7 @@ body {
 @media (min-width: 768px) {
   .text-space {
     width: 50%;
-    padding: 0px 72px;
+    padding: 0px 72px 0px 108px;
   }
 }
 
@@ -234,6 +260,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   z-index: 999;
+  border-bottom: solid 2px #F4F4F4;
 }
 
 .link-header {
@@ -260,7 +287,6 @@ body {
   background-size: 300% 300%;
   -webkit-animation: gradient 10s ease infinite;
           animation: gradient 10s ease infinite;
-  height: 100vh;
 }
 @-webkit-keyframes gradient {
   0% {
@@ -318,8 +344,8 @@ body {
   opacity: 0.75;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
-  -webkit-animation-name: scroll;
-          animation-name: scroll;
+  -webkit-animation-name: mousey;
+          animation-name: mousey;
   -webkit-animation-duration: 2.2s;
           animation-duration: 2.2s;
   -webkit-animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
@@ -328,6 +354,35 @@ body {
           animation-iteration-count: infinite;
 }
 
+@-webkit-keyframes mousey {
+  10% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes mousey {
+  10% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 .scroller {
   width: 3px;
   height: 10px;
@@ -560,7 +615,7 @@ body {
   padding: 10px 0px 10px 40px;
 }
 
-.container {
+.container-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -576,9 +631,14 @@ body {
           align-items: center;
   margin: 0px;
   width: 100%;
-  height: 250px;
   background-color: #F4F4F4;
-  border: none;
+  border: 0px;
+}
+@media (min-width: 768px) {
+  .container-card {
+    width: 40%;
+    overflow: hidden;
+  }
 }
 
 /* ----- slideshow stylings ----- */
@@ -615,6 +675,7 @@ body {
   height: 100%;
   -o-object-fit: fill;
      object-fit: fill;
+  overflow: hidden;
 }
 
 /* @keyframes are used to provide animations
@@ -788,7 +849,7 @@ to which the button is associated. */
 
 .portfolio-link {
   font-family: "outfit";
-  font-size: 20px;
+  font-size: 18px;
   line-height: 25px;
   font-weight: 200;
   color: #1A1D19;
@@ -802,22 +863,28 @@ to which the button is associated. */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 6px solid #1A1D19;
+  border: 4px solid #1A1D19;
   padding: 6px 12px;
 }
 .portfolio-link:hover {
-  border: 6px solid #8E0C0D;
+  border: 4px solid #8E0C0D;
 }
 
 .card-link {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: white;
-  max-width: 270px;
   width: 100%;
-  margin: 20px 0px 10px 18px;
+  margin: 10px 0px;
   text-decoration: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  border: 10px solid #1A1D19;
 }
 .card-link:hover {
   background-color: #8E0C0D;
@@ -836,14 +903,14 @@ to which the button is associated. */
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 30px 0px;
-    width: 40%;
+    padding: 0px;
+    width: 50%;
     margin: 0px;
   }
 }
 
 .inteior-card {
-  margin: 30px 12px 18px 18px;
+  margin: 18px 12px 18px 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -860,9 +927,28 @@ to which the button is associated. */
 }
 
 .card {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 520px;
   text-align: left;
+}
+@media (min-width: 768px) {
+  .card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .section-card {
@@ -888,8 +974,6 @@ to which the button is associated. */
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 30px 0px;
-    width: 100%;
   }
 }
 
@@ -905,11 +989,12 @@ to which the button is associated. */
   background-color: #F4F4F4;
   margin: 0px;
   padding: 0px;
-  height: 900px;
+  height: 800px;
 }
 
 .scroll {
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   width: 50%;
 }
 
@@ -927,10 +1012,20 @@ to which the button is associated. */
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media (min-width: 768px) {
+  .about {
+    width: 50%;
+    padding: 0px 72px 0px 108px;
+  }
+}
 
 .container-scroll {
-  margin-right: -10px;
-  height: 1300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .gallery-wrap {
@@ -943,6 +1038,11 @@ to which the button is associated. */
           flex-direction: column;
   width: 100%;
   height: 1500px;
+}
+@media (min-width: 768px) {
+  .gallery-wrap {
+    width: 50%;
+  }
 }
 
 .item {

@@ -7,8 +7,7 @@
     background: linear-gradient(8deg,$red,$red,$red, #F8CACF, $white,$white);
 	background-size: 300% 300%;
 	animation: gradient 10s ease infinite;
-	height: 100vh;
-
+	
 
 @keyframes gradient {
 	0% {
@@ -49,11 +48,16 @@
 	border-radius: 25px;
 	opacity: 0.75;
 	box-sizing: content-box;
-	animation-name: scroll;
+	animation-name:mousey ;
 	animation-duration: 2.2s;
 	animation-timing-function: cubic-bezier(.15,.41,.69,.94);
 	animation-iteration-count: infinite;
   
+  }
+  @keyframes mousey {
+	10% { transform: translateY(0); }
+	50% { transform: translateY(15px);}
+	100% { transform: translateY(0);} 
   }
   
   .scroller {
