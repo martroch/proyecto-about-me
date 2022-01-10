@@ -1,13 +1,37 @@
+.section-contact{
+    background-color: $dark-grey;
+    padding: 0px $space-large; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
 .contact-card{
     background-color: $white;
     padding: $xl*1.5;
+    max-width: 354px;
+    @media (min-width: 1024px) {
+        max-width: 600px;
+        justify-content: center;
+        padding:$xl $xl*2;
+
+        }
 }
 .top-contact{
     margin-bottom: -16px;
+    margin-left: -110px;
     color: $white;
     font-family: 'conmornt';
     font-size: 60px;
-    font-weight: 100;
+    
+    
+    @media (min-width: 1024px) {
+        font-size: 150px;
+        margin-bottom: -40px;
+        margin-left: -194px;
+        }
 }
 
 .bottom-contact{
@@ -15,9 +39,14 @@
     color: $white;
     font-family: 'conmornt';
     font-size: 60px;
-    font-weight: 100;
-    display: flex;
-    justify-content: right;
+    margin-right: -128px;
+  
+
+   @media (min-width: 1024px) {
+    font-size: 150px;
+    margin-right: -254px;
+    margin-top: -71px;
+    }
 }
 
 .conctact-links{

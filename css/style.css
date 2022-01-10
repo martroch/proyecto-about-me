@@ -1093,17 +1093,52 @@ to which the button is associated. */
   background-image: url("/imagenes/totem.jpg");
 }
 
+.section-contact {
+  background-color: #1A1D19;
+  padding: 0px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .contact-card {
   background-color: #F4F4F4;
   padding: 54px;
+  max-width: 354px;
+}
+@media (min-width: 1024px) {
+  .contact-card {
+    max-width: 600px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 36px 72px;
+  }
 }
 
 .top-contact {
   margin-bottom: -16px;
+  margin-left: -110px;
   color: #F4F4F4;
   font-family: "conmornt";
   font-size: 60px;
-  font-weight: 100;
+}
+@media (min-width: 1024px) {
+  .top-contact {
+    font-size: 150px;
+    margin-bottom: -40px;
+    margin-left: -194px;
+  }
 }
 
 .bottom-contact {
@@ -1111,13 +1146,14 @@ to which the button is associated. */
   color: #F4F4F4;
   font-family: "conmornt";
   font-size: 60px;
-  font-weight: 100;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  margin-right: -128px;
+}
+@media (min-width: 1024px) {
+  .bottom-contact {
+    font-size: 150px;
+    margin-right: -254px;
+    margin-top: -71px;
+  }
 }
 
 .conctact-links {
