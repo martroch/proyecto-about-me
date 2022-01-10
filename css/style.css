@@ -36,8 +36,8 @@
 }
 @media (min-width: 1024px) {
   .name {
-    font-size: 150px;
-    line-height: 120px;
+    font-size: 200px;
+    line-height: 160px;
   }
 }
 
@@ -198,6 +198,9 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 18px 0px;
     min-height: 100vh;
   }
@@ -219,7 +222,10 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 18px 0px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 30px 0px;
     min-height: 100vh;
   }
 }
@@ -584,7 +590,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     overflow: hidden;
-    width: 50%;
+    width: 40%;
   }
 }
 
@@ -601,6 +607,12 @@ body {
   height: 333px;
   width: 250px;
 }
+@media (min-width: 768px) {
+  .personal-img {
+    width: 300px;
+    height: 400px;
+  }
+}
 
 .image {
   margin-top: -30px;
@@ -608,11 +620,21 @@ body {
   width: 250px;
   z-index: -1;
 }
+@media (min-width: 768px) {
+  .image {
+    width: 300px;
+  }
+}
 
 .typing {
   background-color: #8E0C0D;
   margin-right: -30px;
   padding: 10px 0px 10px 40px;
+}
+@media (min-width: 768px) {
+  .typing {
+    margin-top: 80px;
+  }
 }
 
 .container-card {
@@ -955,9 +977,9 @@ to which the button is associated. */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -974,6 +996,7 @@ to which the button is associated. */
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-right: 72px;
   }
 }
 
@@ -1114,7 +1137,7 @@ to which the button is associated. */
 .contact-card {
   background-color: #F4F4F4;
   padding: 54px;
-  max-width: 354px;
+  max-width: 330px;
 }
 @media (min-width: 1024px) {
   .contact-card {

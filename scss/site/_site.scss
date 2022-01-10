@@ -20,6 +20,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     padding: $space--medium 0px;
     min-height: 100vh;
   
@@ -29,12 +30,14 @@ body{
 .secction-dark{
     background-color: $dark-grey;
     padding: $space-large;  
+   
 
     @media (min-width: 768px) {
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding:$space--medium 0px;
+        justify-content: space-between;
+        padding: $space-large 0px;
         min-height: 100vh;
         
     }    

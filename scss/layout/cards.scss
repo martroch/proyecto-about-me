@@ -58,13 +58,14 @@
 }
 .section-card{
     display: flex;
-    align-items: left;
+    align-items: center;
     justify-content: center;
 
     @media (min-width: 768px) {
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin-right: $xl*2;
         
         
     }   
