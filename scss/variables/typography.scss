@@ -9,8 +9,12 @@
     
     
     @media (min-width: 1024px){
-        font-size: 200px;
-        line-height: 160px;
+        font-size: 180px;
+        line-height: 140px;
+    }
+    @media (min-width: 1600px){
+        font-size: 210px;
+        line-height: 170px;
     }
 }
 .text{
@@ -94,9 +98,10 @@
     font-size: 40px;
     font-weight: 200;
     line-height: 40px;
-    background-color: $red;
-    background-position: left;
-    background-size: 100% 2px;
+    background-size: 1px 1em;
+    box-shadow:
+      inset 0 -22px $red,
+     
    
   
 

@@ -51,10 +51,12 @@
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        
-        
+    }
+    @media (min-width: 1024px){
+        max-width: 750px;
+        padding-right: $xl*2;
     }   
-    
+
 }
 .section-card{
     display: flex;
