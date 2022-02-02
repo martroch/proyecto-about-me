@@ -23,8 +23,10 @@ body{
     justify-content: space-between;
     padding: $space--medium 0px;
     min-height: 100vh;
-  
-    }   
+
+    }  
+    @media (min-width: 1800px) {
+    padding: $space--medium 100px;}
 }
 
 .secction-dark{
@@ -40,8 +42,9 @@ body{
         padding: $space-large 0px;
         min-height: 100vh;
         width: 100%;
-        
-    }    
+    }  
+    @media (min-width: 1800px) {
+        padding: $space-large 100px;}  
 }
 
 .text-space{

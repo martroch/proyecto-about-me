@@ -31,6 +31,14 @@
   padding-left: 36px;
 }
 
+.padding-bottom {
+  padding-bottom: 36px;
+}
+
+.padding-top {
+  padding-top: 36px;
+}
+
 .name {
   font-family: "Cormorant";
   font-size: 70px;
@@ -40,7 +48,7 @@
 }
 @media (min-width: 1024px) {
   .name {
-    font-size: 170px;
+    font-size: 160px;
     line-height: 130px;
   }
 }
@@ -59,6 +67,12 @@
   margin: 12px 0;
   letter-spacing: 0.05em;
 }
+@media (min-width: 1600px) {
+  .text {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
 
 .text-small {
   font-family: "outfit";
@@ -66,6 +80,12 @@
   line-height: 18px;
   font-weight: 200;
   margin: 0px;
+}
+@media (min-width: 1600px) {
+  .text-small {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 .intro-title {
@@ -76,6 +96,12 @@
   margin: 12px 0;
   text-align: center;
   color: #1A1D19;
+}
+@media (min-width: 1800px) {
+  .intro-title {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .cita {
@@ -98,6 +124,11 @@
     font-size: 150px;
     margin-top: -100px;
     /*margin-bottom: -20px; me gustaria dejar esto a escepcion del 03*/
+  }
+}
+@media (min-width: 1600px) {
+  .numbers {
+    font-size: 200px;
   }
 }
 
@@ -123,6 +154,12 @@
   line-height: 40px;
   width: 100%;
 }
+@media (min-width: 1600px) {
+  .relevant-text {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
 
 .relevant-text-underlined {
   font-family: "Cormorant";
@@ -133,6 +170,12 @@
   background-size: 1px 1em;
   -webkit-box-shadow: inset 0 -22px #8E0C0D;
           box-shadow: inset 0 -22px #8E0C0D;
+}
+@media (min-width: 1600px) {
+  .relevant-text-underlined {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .link {
@@ -215,6 +258,11 @@ body {
     min-height: 100vh;
   }
 }
+@media (min-width: 1800px) {
+  .secction-white {
+    padding: 18px 100px;
+  }
+}
 
 .secction-dark {
   background-color: #1A1D19;
@@ -238,6 +286,11 @@ body {
     padding: 30px 0px;
     min-height: 100vh;
     width: 100%;
+  }
+}
+@media (min-width: 1800px) {
+  .secction-dark {
+    padding: 30px 100px;
   }
 }
 
@@ -283,6 +336,7 @@ body {
 .link-header {
   color: white;
   text-decoration: none;
+  font-size: 20px;
 }
 
 .gradient {
@@ -810,78 +864,6 @@ body {
   }
 }
 /* ----- end of slideshow stylings ----- */
-/* ----- carousel control buttons stylings ----- */
-.slide-btn {
-  background-color: #1A1D19;
-  border-radius: 50%;
-  border: 2px solid #F4F4F4;
-  width: 1.2rem;
-  height: 1.2rem;
-  outline: none;
-  cursor: pointer;
-  /* stylings for positioning the buttons at
-     the bottom of the carousel */
-  position: absolute;
-  bottom: 3%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: 70;
-}
-
-/* As we provide position as absolute, 
-the buttons places one over the other. 
-So, we have to place them individually
-at their correct positions. */
-.slide-btn-1 {
-  left: 45%;
-}
-
-.slide-btn-2 {
-  left: 50%;
-}
-
-.slide-btn-3 {
-  left: 55%;
-}
-
-.slide-btn-4 {
-  left: 60%;
-}
-
-/* When we focus on the particular button, 
-the animation stops to that particular image 
-to which the button is associated. */
-.slide-btn-1:focus ~ .slideshow-wrapper {
-  -webkit-animation: none;
-          animation: none;
-  left: 0;
-}
-
-.slide-btn-2:focus ~ .slideshow-wrapper {
-  -webkit-animation: none;
-          animation: none;
-  left: -100%;
-}
-
-.slide-btn-3:focus ~ .slideshow-wrapper {
-  -webkit-animation: none;
-          animation: none;
-  left: -200%;
-}
-
-.slide-btn-4:focus ~ .slideshow-wrapper {
-  -webkit-animation: none;
-          animation: none;
-  left: -300%;
-}
-
-/* when we focus on the button, the background color changes */
-.slide-btn:focus {
-  background-color: #8E0C0D;
-}
-
-/* ----- end of carousel control buttons stylings ----- */
 .portfolio-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -971,6 +953,11 @@ to which the button is associated. */
       -ms-flex-align: left;
           align-items: left;
 }
+@media (min-width: 1600px) {
+  .inteior-card {
+    margin: 40px;
+  }
+}
 
 .card {
   display: -webkit-box;
@@ -1000,6 +987,11 @@ to which the button is associated. */
   .card {
     max-width: 750px;
     padding-right: 72px;
+  }
+}
+@media (min-width: 1600px) {
+  .card {
+    max-width: 900px;
   }
 }
 
@@ -1042,7 +1034,17 @@ to which the button is associated. */
   background-color: #F4F4F4;
   margin: 0px;
   padding: 0px;
-  height: 800px;
+  max-height: 900px;
+}
+@media (min-width: 768px) {
+  .section-about {
+    max-height: 100vh;
+  }
+}
+@media (min-width: 1800px) {
+  .section-about {
+    padding-left: 100px;
+  }
 }
 
 .scroll {
@@ -1119,31 +1121,31 @@ to which the button is associated. */
 }
 
 .item-1 {
-  background-image: url("/imagenes/marta.jpg");
+  background-image: url("../imagenes/marta.jpg");
 }
 
 .item-2 {
-  background-image: url("/imagenes/mirror.jpg");
+  background-image: url("../imagenes/mirror.jpg");
 }
 
 .item-3 {
-  background-image: url("/imagenes/SNOW.jpg");
+  background-image: url("../imagenes/SNOW.jpg");
 }
 
 .item-4 {
-  background-image: url("/imagenes/working.jpg");
+  background-image: url("../imagenes/working.jpg");
 }
 
 .item-5 {
-  background-image: url("/imagenes/silencio.jpg");
+  background-image: url("../imagenes/silencio.jpg");
 }
 
 .item-6 {
-  background-image: url("/imagenes/camera.jpg");
+  background-image: url("../imagenes/camera.jpg");
 }
 
 .item-7 {
-  background-image: url("/imagenes/totem.jpg");
+  background-image: url("../imagenes/totem.jpg");
 }
 
 .section-contact {
@@ -1162,6 +1164,7 @@ to which the button is associated. */
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-height: 100vh;
 }
 
 .contact-card {

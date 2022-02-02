@@ -38,7 +38,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;}
+    align-items: left;
+    @media (min-width: 1600px){
+        margin: 40px;
+    }
+}
+    
 
 
 .card{
@@ -56,6 +61,9 @@
         max-width: 750px;
         padding-right: $xl*2;
     }   
+    @media (min-width: 1600px){
+        max-width: 900px;
+    }
 
 }
 .section-card{

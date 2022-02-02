@@ -4,8 +4,15 @@
     width: 100%;
     background-color: $white;
     margin: 0px;
-    padding: 0px;
-    height: 800px;
+    padding:0px;
+    max-height: 900px;
+    @media (min-width: 768px) {
+      max-height: 100vh;
+    }
+    @media (min-width: 1800px) {
+      padding-left: 100px;}  
+
+
 
     
    
@@ -66,28 +73,28 @@
   }
   
   .item-1 { 
-    background-image: url("/imagenes/marta.jpg");}
+    background-image: url("../imagenes/marta.jpg");}
   
   .item-2 { 
-    background-image: url('/imagenes/mirror.jpg');
+    background-image: url('../imagenes/mirror.jpg');
   }
   
   .item-3 { 
-    background-image: url('/imagenes/SNOW.jpg');
+    background-image: url('../imagenes/SNOW.jpg');
   }
   
   .item-4 { 
-    background-image: url('/imagenes/working.jpg');
+    background-image: url('../imagenes/working.jpg');
   }
   
   .item-5 { 
-    background-image: url('/imagenes/silencio.jpg');
+    background-image: url('../imagenes/silencio.jpg');
   }
   .item-6 { 
-    background-image: url('/imagenes/camera.jpg');
+    background-image: url('../imagenes/camera.jpg');
   }
   .item-7 { 
-    background-image: url('/imagenes/totem.jpg');
+    background-image: url('../imagenes/totem.jpg');
   }
 
   
